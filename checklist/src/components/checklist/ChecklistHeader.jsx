@@ -7,3 +7,5 @@ function ChecklistHeader(){
         </div>  
     )
 }
+
+export default ChecklistHeader;
