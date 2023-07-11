@@ -2,6 +2,7 @@ import React, { useImperativeHandle, useState } from "react";
 import ChecklistItem from "../checklistItem/ChecklistItem";
 import ChecklistForm from "../checklistForm/ChecklistForm";
 import ChecklistHeader from "../checklistHeader/ChecklistHeader";
+import "./Checklist.css"
 
 function Checklist() {
   const [items, setItems] = useState([]);
