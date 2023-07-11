@@ -23,6 +23,7 @@ input{
     font-family: var(--input-font);
     font-weight: 600;
     color: var(--deep);
+    padding-top: 20px;
 }
 
 input:focus{
