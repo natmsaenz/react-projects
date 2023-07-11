@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ChecklistForm.css"
 
 function ChecklistForm({ onAddItem }) {
   const [text, setText] = useState("");
@@ -23,7 +24,7 @@ function ChecklistForm({ onAddItem }) {
         onChange={handleChange}
         placeholder="Add a new task"
       />
-      <button type="submit">Add</button>
+     
     </form>
   );
 }
