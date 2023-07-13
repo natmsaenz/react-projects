@@ -1,23 +1,49 @@
-:root{
-    --indigo: #575bd1;
-    --deep:#0e128b;
-    --charlotte:#cceefb;
-    --geraldine:#f99d7b;
-    --sweetcorn:#fade8a;
-    --biloba:#a99deb;
-    --boticelli:#dce5ef;
-    --apricot:#f19283;
-    --cherokee:#fbc493;
-    --lavender:#faa0c7;
-    --electric:#e223ef;
+:root {
+  --indigo: #575bd1;
+  --deep: #0e128b;
+  --charlotte: #cceefb;
+  --geraldine: #f99d7b;
+  --sweetcorn: #fade8a;
+  --biloba: #a99deb;
+  --boticelli: #dce5ef;
+  --apricot: #f19283;
+  --cherokee: #fbc493;
+  --lavender: #faa0c7;
+  --electric: #e223ef;
 
-    --title-font:'IBM Plex Mono', monospace;
-    --input-font:'IBM Plex Mono', monospace;
-    --buttons-font:'Inter', sans-serif;
+  --title-font: "IBM Plex Mono", monospace;
+  --input-font: "IBM Plex Mono", monospace;
+  --buttons-font: "Inter", sans-serif;
 }
 
-.singleChecklistItem{
-    display:flex;
-    flex-direction:row;
-    
+.singleChecklistItem {
+  display: flex;
+  flex-direction: row;
 }
+
+.singleChecklistItem input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 0.15em;
+  margin-right: 7px;
+  border: 3px solid var(--electric);
+  background-color: transparent;
+  outline: none;
+}
+
+input:checked {
+  background-color: var(--electric);
+  position: relative;
+}
+
+input:checked::before{
+  content: "2714";
+  font-size: 1.5em;
+  color: var(--sweetcorn);
+  position: absolute;
+  right: 1px;
+  top: -5px;
+}
+
