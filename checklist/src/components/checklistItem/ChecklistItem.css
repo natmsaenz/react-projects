@@ -67,8 +67,21 @@ span{
   border:none;
   color: var(--indigo);
   margin: 7px;
+  transition: transform 0.3s ease-in-out;
+
 }
 
 .singleChecklistItem button:hover{
   color: var(--apricot);
+    animation: shake 1s infinite ;
+  
+}
+
+@keyframes shake{
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
 }
