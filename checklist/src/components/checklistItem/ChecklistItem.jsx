@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./ChecklistItem.css"
+import "./ChecklistItem.css";
 
 function ChecklistItem({ item, onToggle, onDelete }) {
   const handleToggle = () => {
@@ -15,8 +15,13 @@ function ChecklistItem({ item, onToggle, onDelete }) {
   return (
     <div className="singleChecklistItem">
       <input type="checkbox" checked={item.completed} onChange={handleToggle} />
+
       <span className={item.completed ? "completed" : ""}>{item.text}</span>
-      <button onClick={handleDelete}><FontAwesomeIcon icon={faTrashCan} /></button>
+      <div className="buttons">
+        <button onClick={handleDelete}>
+          <FontAwesomeIcon icon={faTrashCan} />
+        </button>
+      </div>
     </div>
   );
 }

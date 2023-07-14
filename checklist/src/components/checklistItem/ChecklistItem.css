@@ -19,8 +19,17 @@
 .singleChecklistItem {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  margin:7px;
+  width: 200px;
+ 
 }
+.buttons{
+  display: flex;
+  flex-direction: column;
 
+  justify-content: flex-end;
+}
 .singleChecklistItem input {
   appearance: none;
   -webkit-appearance: none;
