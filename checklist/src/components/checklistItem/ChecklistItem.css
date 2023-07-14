@@ -39,7 +39,7 @@ input:checked {
 }
 
 input:checked::before{
-  content: "2714";
+  content: "\2714";
   font-size: 1.5em;
   color: var(--sweetcorn);
   position: absolute;
@@ -47,3 +47,19 @@ input:checked::before{
   top: -5px;
 }
 
+span{
+  font-family: var(--input-font);
+  color: var(--deep);
+
+}
+
+.singleChecklistItem button{
+  background-color: transparent;
+  border:none;
+  color: var(--indigo);
+  margin: 7px;
+}
+
+.singleChecklistItem button:hover{
+  color: var(--apricot);
+}
