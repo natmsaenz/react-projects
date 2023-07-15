@@ -20,11 +20,10 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin:7px;
+  margin: 7px;
   width: 200px;
- 
 }
-.buttons{
+.buttons {
   display: flex;
   flex-direction: column;
 
@@ -40,52 +39,55 @@ input[type="checkbox"] {
   border: 3px solid var(--electric);
   background-color: transparent;
   outline: none;
-  transform: translateY(-.075em);
-position: relative;
+  position: relative;
 }
 
-input[type="checkbox"]::before{
+input[type="checkbox"]::before {
   content: "";
-  width: .65em;
-  height: .65em;
+  width: 0.65em;
+  height: 0.65em;
   transform: scale(0);
+  border: 3px solid var(--geraldine);
   background-color: var(--electric);
   transition: 120ms transform ease-in-out;
   box-shadow: inset 1em 1em var(--lavender);
   transform-origin: center;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
- position: absolute;
- top: 50%;
- left: 40%;
- transform: translate(-50%,-50%) scale(0);
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%) scale(0);
 }
-
-input[type="checkbox"]:checked::before{
-  transform: translate(-50%,-50%) scale(1);
+input[type="checkbox"]:checked {
+  background-color: var(--electric);
 }
-
-span{
+input[type="checkbox"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--electric);
+}
+[type="checkbox"]:not(:checked)::before {
+  border: 2px solid var(--electric);
+  background-color: transparent;
+}
+span {
   font-family: var(--input-font);
   color: var(--deep);
-
 }
 
-.singleChecklistItem button{
+.singleChecklistItem button {
   background-color: transparent;
-  border:none;
+  border: none;
   color: var(--indigo);
   margin: 7px;
   transition: transform 0.3s ease-in-out;
-
 }
 
-.singleChecklistItem button:hover{
+.singleChecklistItem button:hover {
   color: var(--apricot);
-    animation: shake 1s infinite ;
-  
+  animation: shake 1s infinite;
 }
 
-@keyframes shake{
+@keyframes shake {
   from {
     transform: rotate(45deg);
   }
