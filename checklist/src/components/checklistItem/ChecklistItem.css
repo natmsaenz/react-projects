@@ -30,7 +30,7 @@
 
   justify-content: flex-end;
 }
-.singleChecklistItem input {
+input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   width: 1.6em;
@@ -40,20 +40,28 @@
   border: 3px solid var(--electric);
   background-color: transparent;
   outline: none;
+  transform: translateY(-.075em);
+position: relative;
 }
 
-input:checked {
+input[type="checkbox"]::before{
+  content: "";
+  width: .65em;
+  height: .65em;
+  transform: scale(0);
   background-color: var(--electric);
-  position: relative;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--lavender);
+  transform-origin: center;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+ position: absolute;
+ top: 50%;
+ left: 40%;
+ transform: translate(-50%,-50%) scale(0);
 }
 
-input:checked::before{
-  content: "\2714";
-  font-size: 1.5em;
-  color: var(--sweetcorn);
-  position: absolute;
-  right: 1px;
-  top: -5px;
+input[type="checkbox"]:checked::before{
+  transform: translate(-50%,-50%) scale(1);
 }
 
 span{
