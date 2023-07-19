@@ -16,3 +16,39 @@
   --buttons-font: "Inter", sans-serif;
 }
 
+.singleChecklistItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: .0001em solid var(--indigo);
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(119, 0, 255, 0.1);
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 5px;
+  position: relative;
+}
+
+.singleChecklistItem:hover{
+  border: .001em solid var(--indigo);
+  box-shadow: 0 4px 6px rgba(119, 0, 255, 0.1);
+}
+
+span{
+  font-family: var(--input-font);
+  color: var(--deep);
+  padding: 3px 7px;
+
+}
+span::-moz-selection{
+  color: var(--charlotte);
+  background: var(--indigo);
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
