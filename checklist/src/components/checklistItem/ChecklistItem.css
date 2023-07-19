@@ -36,6 +36,8 @@
   box-shadow: 0 4px 6px rgba(119, 0, 255, 0.1);
 }
 
+
+
 span{
   font-family: var(--input-font);
   color: var(--deep);
@@ -52,3 +54,18 @@ span::-moz-selection{
   flex-direction: column;
   justify-content: flex-end;
 }
+
+button{
+  appearance: none;
+  border-radius: 50%;
+  color: var(--deep);
+  background-color: transparent;
+  border: .1em solid var(--biloba);
+  padding: 5px;
+  width: 5px;
+  height: 5px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+

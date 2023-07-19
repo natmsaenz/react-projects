@@ -19,7 +19,7 @@ function ChecklistItem({ item, onToggle, onDelete }) {
       <span className={item.completed ? "completed" : ""}>{item.text}</span>
       <div className="buttons">
         <button onClick={handleDelete}>
-          <FontAwesomeIcon icon={faTrashCan} className="icon"/>
+          <FontAwesomeIcon icon={faTrashCan} className="deleteIcon"/>
         </button>
       </div>
     </div>
