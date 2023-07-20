@@ -61,11 +61,12 @@ button{
   color: var(--deep);
   background-color: transparent;
   border: .1em solid var(--biloba);
-  padding: 5px;
-  width: 5px;
-  height: 5px;
+  padding: 4px;
   display: flex; 
   justify-content: center; 
   align-items: center;
 }
 
+.deleteIcon{
+  color: var(--deep);
+}
