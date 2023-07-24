@@ -15,8 +15,7 @@ function ChecklistItem({ item, onToggle, onDelete }) {
   return (
     <div className="singleChecklistItem">
       <input type="checkbox" checked={item.completed} onChange={handleToggle} />
-
-      <span className={item.completed ? "completed" : ""}>{item.text}</span>
+      <span className={item.completed ? "completed crossed-out" : ""}>{item.text}</span>
       <div className="buttons">
         <button onClick={handleDelete}>
           <FontAwesomeIcon icon={faTrashCan} className="deleteIcon"/>

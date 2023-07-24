@@ -36,7 +36,23 @@
   box-shadow: 0 4px 6px rgba(119, 0, 255, 0.1);
 }
 
+.crossed-out{
+  text-decoration: line-through;
+  color: var(--deep);
+}
 
+@keyframes cross-out{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.completed.crossed-out span{
+
+animation: cross-out 1s forwards;
+}
 
 span{
   font-family: var(--input-font);
@@ -68,26 +84,11 @@ button{
 
 .deleteIcon{
   color: var(--deep);
-  transition: transform 0.3s ease-in-out;
-}
-
-button:hover{
-  border-radius: 50%;
-  background-color: var(--indigo);
-  box-shadow: 0 0 4px rgba(119, 0, 255, 0.1);
-  border: .2em solid var(--indigo);
 }
 
 .deleteIcon:hover{
-  color: var(--boticelli);
-  animation: shake 1s ;
+  color: var(--apricot);
 }
 
-@keyframes shake{
-  from {
-    transform: rotate(45deg);
-  }
-  to {
-    transform: rotate(-45deg);
-  }
-}
+
+
