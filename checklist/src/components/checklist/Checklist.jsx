@@ -42,9 +42,9 @@ function Checklist() {
             onDelete={deleteItem}
           />
         ))}
-       
+          <ChecklistForm onAddItem={addItem} /> 
       </div>
-      <ChecklistForm onAddItem={addItem} />
+   
     </div>
   );
 }
