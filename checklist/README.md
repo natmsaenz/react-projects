@@ -19,7 +19,7 @@ The Checklist Project is a simple web application that allows users to create an
 - HTML
 - CSS
 - JavaScript
-- React.js (if applicable)
+- React.js 
 
 ## Installation
 
