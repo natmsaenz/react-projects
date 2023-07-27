@@ -52,6 +52,7 @@
 .completed.crossed-out span{
 
 animation: cross-out 1s forwards;
+opacity: 50%;
 }
 
 span{

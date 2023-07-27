@@ -44,9 +44,16 @@ div {
   overflow-x: auto;
 }
 .checklistForm {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   left: 0;
+  width: 100%;
+}
+
+ChecklistForm{
   width: 100%;
 }
 
@@ -56,3 +63,5 @@ div {
     height: 90%;
   }
 }
+
+
