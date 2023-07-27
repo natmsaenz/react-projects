@@ -18,7 +18,7 @@ function ChecklistForm({ onAddItem }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <input className="add-task"
         type="text"
         value={text}
         onChange={handleChange}

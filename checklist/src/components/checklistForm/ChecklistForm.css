@@ -16,7 +16,7 @@
     --buttons-font:'Inter', sans-serif;
 }
 
-input{
+.add-task{
     background-color: #ffffff;
     border:1px solid var(--charlotte);
     border-radius: 30px;
@@ -26,9 +26,10 @@ input{
     padding: 10px;
     display: flex;
     align-items: center;
+    margin-top: 15px;
 }
 
-input:focus{
+.add-task:focus{
     border:none;
     border-bottom: 1px  solid var(--indigo);
     outline: none;
