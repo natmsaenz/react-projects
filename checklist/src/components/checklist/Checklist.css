@@ -1,0 +1,67 @@
+:root {
+  --indigo: #575bd1;
+  --charlotte: #cceefb;
+  --geraldine: #f99d7b;
+  --sweetcorn: #fade8a;
+  --biloba: #a99deb;
+  --boticelli: #dce5ef;
+  --apricot: #f19283;
+  --cherokee: #fbc493;
+  --lavender: #faa0c7;
+  --electric: #e223ef;
+
+  --title-font: "IBM Plex Mono", monospace;
+  --input-font: "IBM Plex Mono", monospace;
+  --buttons-font: "Inter", sans-serif;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app {
+  background-color: var(--boticelli);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-top: 30px;
+  max-width: 30vw;
+  height: 500px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+.checklist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20vw;
+  overflow-x: auto;
+}
+.checklistForm {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+ChecklistForm{
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #app {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+

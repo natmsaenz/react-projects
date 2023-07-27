@@ -1,0 +1,95 @@
+:root {
+  --indigo: #575bd1;
+  --deep: #0e128b;
+  --charlotte: #cceefb;
+  --geraldine: #f99d7b;
+  --sweetcorn: #fade8a;
+  --biloba: #a99deb;
+  --boticelli: #dce5ef;
+  --apricot: #f19283;
+  --cherokee: #fbc493;
+  --lavender: #faa0c7;
+  --electric: #e223ef;
+
+  --title-font: "IBM Plex Mono", monospace;
+  --input-font: "IBM Plex Mono", monospace;
+  --buttons-font: "Inter", sans-serif;
+}
+
+.singleChecklistItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: .0001em solid var(--indigo);
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(119, 0, 255, 0.1);
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 5px;
+  position: relative;
+}
+
+.singleChecklistItem:hover{
+  border: .001em solid var(--indigo);
+  box-shadow: 0 4px 6px rgba(119, 0, 255, 0.1);
+}
+
+.crossed-out{
+  text-decoration: line-through;
+  color: var(--deep);
+}
+
+@keyframes cross-out{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.completed.crossed-out span{
+
+animation: cross-out 1s forwards;
+opacity: 50%;
+}
+
+span{
+  font-family: var(--input-font);
+  color: var(--deep);
+  padding: 3px 7px;
+
+}
+span::-moz-selection{
+  color: var(--charlotte);
+  background: var(--indigo);
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+button{
+  appearance: none;
+  border: none;
+  color: var(--deep);
+  background-color: transparent;
+  padding: 4px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.deleteIcon{
+  color: var(--deep);
+}
+
+.deleteIcon:hover{
+  color: var(--apricot);
+}
+
+
+

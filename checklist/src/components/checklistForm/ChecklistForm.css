@@ -1,0 +1,37 @@
+:root{
+    --indigo: #575bd1;
+    --deep:#0e128b;
+    --charlotte:#cceefb;
+    --geraldine:#f99d7b;
+    --sweetcorn:#fade8a;
+    --biloba:#a99deb;
+    --boticelli:#dce5ef;
+    --apricot:#f19283;
+    --cherokee:#fbc493;
+    --lavender:#faa0c7;
+    --electric:#e223ef;
+
+    --title-font:'IBM Plex Mono', monospace;
+    --input-font:'IBM Plex Mono', monospace;
+    --buttons-font:'Inter', sans-serif;
+}
+
+.add-task{
+    background-color: #ffffff;
+    border:1px solid var(--charlotte);
+    border-radius: 30px;
+    font-family: var(--input-font);
+    font-weight: 600;
+    color: var(--deep);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.add-task:focus{
+    border:none;
+    border-bottom: 1px  solid var(--indigo);
+    outline: none;
+  
+}
