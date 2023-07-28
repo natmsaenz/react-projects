@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState} from "react";
 import ReactMarkdown from "react-markdown";
 import MarkdownDisplay from "../markdownDisplay/MarkdownDisplay";
