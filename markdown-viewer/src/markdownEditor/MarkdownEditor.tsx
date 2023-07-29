@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState} from "react";
 import ReactMarkdown from "react-markdown";
-import MarkdownDisplay from "../markdownDisplay/MarkdownDisplay";
+import MarkdownPreview from "../markdownPreview/MarkdownPreview";
+import ExpandButton from "../expandButton/ExpandButton";
 import "./MarkdownEditor.css"
 
 
@@ -15,7 +16,10 @@ const MarkdownEditor = () =>{
     return(
         <div className="markdownEditorSection">
             <div className="markdownEditorContainer">
+                <div className="topBar">
                 <h2>Markdown Editor</h2>
+                <ExpandButton />
+                </div>
                 <textarea
                 className="markdownEditor"
                 value={markdownContent}
@@ -24,9 +28,9 @@ const MarkdownEditor = () =>{
                 />
             </div>
 
-        <div className="markdownDisplayContainer">
-            <h2>Markdown Preview</h2>
-            <MarkdownDisplay content={markdownContent}/>
+        <div className="MarkdownPreviewContainer">
+           
+            <MarkdownPreview content={markdownContent}/>
         </div>
 
         </div>

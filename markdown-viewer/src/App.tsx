@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import './App.css'
 import MarkdownEditor from './markdownEditor/MarkdownEditor'
-import MarkdownDisplay from './markdownDisplay/MarkdownDisplay'
+import MarkdownPreview from './MarkdownPreview/MarkdownPreview'
 import React, {useState} from "react";
 
 
@@ -13,7 +13,7 @@ function App() {
       <div className='markdownBody'>
 
         <MarkdownEditor />
-        <MarkdownDisplay content={markdownContent} />
+        <MarkdownPreview content={markdownContent} />
       </div>
      
     </>
