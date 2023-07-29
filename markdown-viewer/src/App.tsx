@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import './App.css'
 import MarkdownEditor from './markdownEditor/MarkdownEditor'
-import MarkdownPreview from './MarkdownPreview/MarkdownPreview'
+import MarkdownPreview from './markdownPreview/MarkdownPreview';
 import React, {useState} from "react";
 
 

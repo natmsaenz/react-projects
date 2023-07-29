@@ -9,12 +9,15 @@ interface MarkdownPreviewProps {
 }
 
 const MarkdownPreview: React.FC<MarkdownPreviewProps> = ({ content }) => {
+    const [isExpanded,setIsExpanded] = useState(false);
+    const handleExpandClick = () => {
+        setIsExpanded((prevExpanded) => !prevExpanded);
+      };
+    
     return (
         <div className="MarkdownPreview">
-            <div className="topBar">
-            <h2>Markdown Preview</h2><ExpandButton />
-            </div>
-            <ReactMarkdown>{content}</ReactMarkdown>
+            
+            {isExpanded && <ReactMarkdown>{content}</ReactMarkdown>}
         </div>
     );
 }

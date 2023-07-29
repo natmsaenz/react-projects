@@ -8,17 +8,22 @@ import "./MarkdownEditor.css"
 
 const MarkdownEditor = () =>{
     const [markdownContent, setMarkdownContent] = useState<string>('');
+    const [isExpanded,setIsExpanded] = useState(false);
 
     const handleMarkdownChange = (event: React.ChangeEvent<HTMLTextAreaElement>) =>{
         setMarkdownContent(event.target.value);
     };
+    const handleExpandClick = () => {
+        setIsExpanded((prevExpanded) => !prevExpanded);
+      };
+    
 
     return(
-        <div className="markdownEditorSection">
+        <>
             <div className="markdownEditorContainer">
                 <div className="topBar">
                 <h2>Markdown Editor</h2>
-                <ExpandButton />
+                <ExpandButton isExpanded={isExpanded} onExpandClick={handleExpandClick}/>
                 </div>
                 <textarea
                 className="markdownEditor"
@@ -28,12 +33,14 @@ const MarkdownEditor = () =>{
                 />
             </div>
 
-        <div className="MarkdownPreviewContainer">
-           
+        <div className="markdownPreviewContainer">
+        <div className="topBar">
+            <h2>Markdown Preview</h2><ExpandButton isExpanded={isExpanded} onExpandClick={handleExpandClick}/>
+            </div>
             <MarkdownPreview content={markdownContent}/>
         </div>
 
-        </div>
+        </>
     )
 }
 
