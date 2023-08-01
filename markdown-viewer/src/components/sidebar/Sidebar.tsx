@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faLightbulb,
-  faFolderOpen,
+  faFolderOpen, faFilePen
 } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
@@ -14,16 +14,16 @@ const Sidebar = () => {
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const handleSidebarToggle = () => {
+    console.log("toggle sidebar");
     setIsSidebarOpen((prevIsOpen) => !prevIsOpen);
   };
   return (
     <div className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
       <div className="sidebarHeader">
         <div className="toggleButton" onClick={handleSidebarToggle}>
-        
-          <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon icon={faBars} />
         </div>
-        <h2>Markdown Editor</h2>
+        <FontAwesomeIcon icon={faFilePen} /><h2>Markdown Editor</h2>
       </div>
       <ul className="sidebarLinks">
         <li>

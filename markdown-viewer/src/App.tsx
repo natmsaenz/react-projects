@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import './App.css'
-import MarkdownEditor from './markdownEditor/MarkdownEditor'
-import MarkdownPreview from './markdownPreview/MarkdownPreview';
-import Sidebar from './sidebar/Sidebar';
+import MarkdownEditor from './components/markdownEditor/MarkdownEditor'
+import MarkdownPreview from './components/markdownPreview/MarkdownPreview';
+import Sidebar from './components/sidebar/Sidebar';
 import React, {useState} from "react";
 
 
@@ -11,8 +11,10 @@ function App() {
 
   return (
     <div>
-      <div className='sidebarWrapper'></div>
+      <div className='sidebarWrapper'>
       <Sidebar />
+      </div>
+     
       <div className='markdownBody'>
 
         <MarkdownEditor />
