@@ -2,24 +2,18 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import ExpandButton from "../expandButton/ExpandButton";
-import "./MarkdownPreview.css"
+import "./MarkdownPreview.css";
 
 interface MarkdownPreviewProps {
-    content: string;
+  content: string;
 }
 
 const MarkdownPreview: React.FC<MarkdownPreviewProps> = ({ content }) => {
-    const [isExpanded,setIsExpanded] = useState(false);
-    const handleExpandClick = () => {
-        setIsExpanded((prevExpanded) => !prevExpanded);
-      };
-    
-    return (
-        <div className="MarkdownPreview">
-            
-            {isExpanded && <ReactMarkdown>{content}</ReactMarkdown>}
-        </div>
-    );
-}
+  return (
+    <div className="MarkdownPreview">
+      <ReactMarkdown>{content}</ReactMarkdown>
+    </div>
+  );
+};
 
 export default MarkdownPreview;
