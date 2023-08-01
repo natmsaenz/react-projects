@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faLightbulb, faGithub} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faLightbulb, faFolderOpen} from "@fortawesome/free-solid-svg-icons";
 
 
 const Sidebar = () =>{
@@ -18,10 +18,12 @@ return(
                 <a href={cheatSheetUrl} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLightbulb} /> Cheat Sheet</a>
             </li>
            <li>
-           <a href={repositoryUrl} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /> Github repository</a>
+           <a href={repositoryUrl} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFolderOpen} /> Github repository</a>
             
            </li>
         </ul>
     </div>
 )
 }
+
+export default Sidebar
