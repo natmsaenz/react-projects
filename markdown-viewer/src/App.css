@@ -1,33 +1,48 @@
-body{
+:root{
+  --teal: #6ec6af;
+  --light:#f5fffc;
+  --green:#85db51;
+  --navy:#282f56;
+  --purple:#9d65b5;
+  --lavender:#deb8ee;
+  --indigo:#3a00a9;
+  --aqua:#00dcfe;
+  --light-aqua:#e3ebec;
+
+  --ff-primary: 'Inconsolata', sans-serif;
+  --ff-secondary: 'Space Mono', sans-serif;
+}
+
+body {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 100vh;
+  background-color: var(--light);
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
-.sidebarWrapper{
+.sidebarWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-right: 20px;
-  float: left;
   position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .markdownWrapper {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }

@@ -19,7 +19,7 @@ const Sidebar = () => {
     setIsSidebarOpen((prevIsOpen) => !prevIsOpen);
   };
   return (
-    <aside id="sidebar" className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
+    <div id="sidebar" className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
       <div className="sidebarHeader">
         <div className="toggleButton" onClick={handleSidebarToggle}>
         <FontAwesomeIcon icon={faBars} />
@@ -38,7 +38,7 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
-    </aside>
+    </div>
   );
 };
 
