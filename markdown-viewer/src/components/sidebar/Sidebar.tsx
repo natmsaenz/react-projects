@@ -6,6 +6,7 @@ import {
   faLightbulb,
   faFolderOpen, faFilePen
 } from "@fortawesome/free-solid-svg-icons";
+import "./Sidebar.css"
 
 const Sidebar = () => {
   const cheatSheetUrl = "https://www.markdownguide.org/cheat-sheet/";
@@ -18,26 +19,26 @@ const Sidebar = () => {
     setIsSidebarOpen((prevIsOpen) => !prevIsOpen);
   };
   return (
-    <div className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
+    <aside id="sidebar" className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
       <div className="sidebarHeader">
         <div className="toggleButton" onClick={handleSidebarToggle}>
         <FontAwesomeIcon icon={faBars} />
         </div>
-        <FontAwesomeIcon icon={faFilePen} /><h2>Markdown Editor</h2>
+        <FontAwesomeIcon icon={faFilePen} /><h2 className="sidebarTitle">Markdown Editor</h2>
       </div>
       <ul className="sidebarLinks">
         <li>
           <a href={cheatSheetUrl} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLightbulb} /> Cheat Sheet
+            <FontAwesomeIcon icon={faLightbulb} id="cheatsheet" /> Cheat Sheet
           </a>
         </li>
         <li>
           <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faFolderOpen} /> Github repository
+            <FontAwesomeIcon icon={faFolderOpen} id="folder"/> Github repository
           </a>
         </li>
       </ul>
-    </div>
+    </aside>
   );
 };
 

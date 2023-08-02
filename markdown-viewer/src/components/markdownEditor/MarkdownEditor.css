@@ -1,0 +1,16 @@
+.markdownEditorContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.topBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    
+}
+
+h2{
+    padding: 10px;
+}

@@ -10,12 +10,12 @@ function App() {
   const [markdownContent, setMarkdownContent] = useState<string>('');
 
   return (
-    <div>
+    <div className='container'>
       <div className='sidebarWrapper'>
       <Sidebar />
       </div>
      
-      <div className='markdownBody'>
+      <div className='markdownWrapper'>
 
         <MarkdownEditor />
         <MarkdownPreview content={markdownContent} />

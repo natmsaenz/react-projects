@@ -22,7 +22,7 @@ const MarkdownEditor = () => {
     <>
       <div className="markdownEditorContainer">
         <div className="topBar">
-          <h2>Markdown Editor</h2>
+          <h2 className="editorTitle">Markdown Editor</h2>
           <ExpandButton
             isExpanded={isExpanded}
             onExpandClick={handleExpandClick}
@@ -38,7 +38,7 @@ const MarkdownEditor = () => {
 
       <div className="markdownPreviewContainer">
         <div className="topBar">
-          <h2>Markdown Preview</h2>
+          <h2 className="previewTitle">Markdown Preview</h2>
           <ExpandButton
             isExpanded={isExpanded}
             onExpandClick={handleExpandClick}
