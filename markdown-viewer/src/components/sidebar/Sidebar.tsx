@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faLightbulb,
-  faFolderOpen, faFilePen
+  faFolderOpen,
+  faFilePen,
+  faCircleXmark
 } from "@fortawesome/free-solid-svg-icons";
-import "./Sidebar.css"
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const cheatSheetUrl = "https://www.markdownguide.org/cheat-sheet/";
@@ -19,26 +21,37 @@ const Sidebar = () => {
     setIsSidebarOpen((prevIsOpen) => !prevIsOpen);
   };
   return (
-    <div id="sidebar" className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
-      <div className="sidebarHeader">
-        <div className="toggleButton" onClick={handleSidebarToggle}>
+    <>
+      <div
+        className={`toggleButton ${isSidebarOpen ? "rotateIcon" : ""}`}
+        onClick={handleSidebarToggle}
+      >
         <FontAwesomeIcon icon={faBars} />
-        </div>
-        <FontAwesomeIcon icon={faFilePen} /><h2 className="sidebarTitle">Markdown Editor</h2>
       </div>
-      <ul className="sidebarLinks">
-        <li>
-          <a href={cheatSheetUrl} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLightbulb} id="cheatsheet" /> Cheat Sheet
-          </a>
-        </li>
-        <li>
-          <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faFolderOpen} id="folder"/> Github repository
-          </a>
-        </li>
-      </ul>
-    </div>
+      <div
+        id="sidebar"
+        className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}
+      >
+        <div className="sidebarHeader">
+          <FontAwesomeIcon icon={faFilePen} id="pen" />
+          <h2 className="sidebarTitle">Markdown Editor</h2>
+          <FontAwesomeIcon icon={faCircleXmark} id="xmark" />
+        </div>
+        <ul className="sidebarLinks">
+          <li>
+            <a href={cheatSheetUrl} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLightbulb} id="cheatsheet" /> Cheat Sheet
+            </a>
+          </li>
+          <li>
+            <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFolderOpen} id="folder" /> Github
+              repository
+            </a>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 };
 
