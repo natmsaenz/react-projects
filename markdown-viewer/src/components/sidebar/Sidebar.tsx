@@ -6,8 +6,8 @@ import {
   faLightbulb,
   faFolderOpen,
   faFilePen,
-  faCircleXmark
 } from "@fortawesome/free-solid-svg-icons";
+import {  faCircleXmark} from "@fortawesome/free-regular-svg-icons"
 import "./Sidebar.css";
 
 const Sidebar = () => {
@@ -17,7 +17,6 @@ const Sidebar = () => {
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const handleSidebarToggle = () => {
-    console.log("toggle sidebar");
     setIsSidebarOpen((prevIsOpen) => !prevIsOpen);
   };
   return (
@@ -33,22 +32,28 @@ const Sidebar = () => {
         className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}
       >
         <div className="sidebarHeader">
+          <div className="leftSideContent">
           <FontAwesomeIcon icon={faFilePen} id="pen" />
           <h2 className="sidebarTitle">Markdown Editor</h2>
-          <FontAwesomeIcon icon={faCircleXmark} id="xmark" />
+          </div>
+          <FontAwesomeIcon icon={faCircleXmark} id="xmark" className={`toggleButton ${isSidebarOpen ? "open" : "closed"}`} onClick={handleSidebarToggle} />
         </div>
         <ul className="sidebarLinks">
+          <div className="cheatSheet">
           <li>
             <a href={cheatSheetUrl} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLightbulb} id="cheatsheet" /> Cheat Sheet
             </a>
           </li>
+          </div>
+          <div className="folder">
           <li>
             <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFolderOpen} id="folder" /> Github
               repository
             </a>
           </li>
+          </div>
         </ul>
       </div>
     </>
