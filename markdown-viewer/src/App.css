@@ -21,12 +21,14 @@ body {
   align-items: center;
   height: 100vh;
   background-color: var(--light);
+  flex-grow: 1;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  height: 100%;
 }
 
 .sidebarWrapper {
