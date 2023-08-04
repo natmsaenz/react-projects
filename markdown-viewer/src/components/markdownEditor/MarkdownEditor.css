@@ -25,6 +25,11 @@
     box-shadow:  0 2px 4px var(--navy);
 }
 
+.markdownEditorContainer.expanded{
+    width: 300px;
+   height: 125px;
+}
+
 .topBar{
     display: flex;
     flex-direction: row;
@@ -51,9 +56,14 @@
     align-items: center;
 }
 .editorTitle{
-    padding: 10px;
+    padding: 5px;
     font-family: var(--ff-primary);
     font-weight: 200;
     color: var(--navy);
     font-size: 20px;
 }
+#pen{
+    color: var(--navy);
+    font-size: 10px;
+}
+

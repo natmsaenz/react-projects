@@ -22,10 +22,10 @@ const MarkdownEditor = () => {
 
   return (
     <>
-      <div className="markdownEditorContainer">
+      <div className={`markdownEditorContainer ${isExpanded ? "expanded" : ""}`}>
         <div className="topBar">
         <div className="leftSideContentEditor">
-        <FontAwesomeIcon icon={faPen} /> <h2 className="editorTitle">Markdown Editor</h2>
+        <FontAwesomeIcon icon={faPen} id="pen"/> <h2 className="editorTitle">Markdown Editor</h2>
         </div>
           <ExpandButton
             isExpanded={isExpanded}
@@ -40,7 +40,7 @@ const MarkdownEditor = () => {
         />
       </div>
 
-      <div className="markdownPreviewContainer">
+      <div className={`markdownPreviewContainer ${isExpanded ? "expanded" : ""}`}>
         <div className="topBarPreview">
           <h2 className="previewTitle">Markdown Preview</h2>
           <ExpandButton
