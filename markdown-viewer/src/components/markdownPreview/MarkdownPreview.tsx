@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import ExpandButton from "../expandButton/ExpandButton";
+import ExpandButtons from "../expandButton/ExpandButtons";
 import "./MarkdownPreview.css";
 
 interface MarkdownPreviewProps {

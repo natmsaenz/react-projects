@@ -2,9 +2,8 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import MarkdownPreview from "../markdownPreview/MarkdownPreview";
-import ExpandButton from "../expandButton/ExpandButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { faPen, faWindowMaximize, faWindowMinimize } from "@fortawesome/free-solid-svg-icons";
 import "./MarkdownEditor.css";
 
 const MarkdownEditor = () => {
@@ -27,10 +26,13 @@ const MarkdownEditor = () => {
         <div className="leftSideContentEditor">
         <FontAwesomeIcon icon={faPen} id="pen"/> <h2 className="editorTitle">Markdown Editor</h2>
         </div>
-          <ExpandButton
-            isExpanded={isExpanded}
-            onExpandClick={handleExpandClick}
-          />
+        <div className="expandButtonsWrapper">
+        <FontAwesomeIcon icon={faWindowMaximize} id="max" className={`maximizeButton ${isExpanded ? "" : "expanded"}`} onClick={handleExpandClick}/>
+        <FontAwesomeIcon icon={faWindowMinimize} id="min" className={`minimizeButton ${isExpanded ? "expanded" : ""}`} onClick={handleExpandClick}/>
+
+
+        </div>
+      
         </div>
         <textarea
           className="markdownEditor"
@@ -43,10 +45,13 @@ const MarkdownEditor = () => {
       <div className={`markdownPreviewContainer ${isExpanded ? "expanded" : ""}`}>
         <div className="topBarPreview">
           <h2 className="previewTitle">Markdown Preview</h2>
-          <ExpandButton
-            isExpanded={isExpanded}
-            onExpandClick={handleExpandClick}
-          />
+          <div className="expandButtonsWrapper">
+        <FontAwesomeIcon icon={faWindowMaximize} id="max" className={`maximizeButton ${isExpanded ? "" : "expanded"}`} onClick={handleExpandClick}/>
+        <FontAwesomeIcon icon={faWindowMinimize} id="min" className={`minimizeButton ${isExpanded ? "expanded" : ""}`} onClick={handleExpandClick}/>
+
+
+        </div>
+
         </div>
         <MarkdownPreview content={markdownContent} />
       </div>
