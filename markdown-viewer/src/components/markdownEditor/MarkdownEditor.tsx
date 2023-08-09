@@ -15,8 +15,12 @@ const MarkdownEditor = () => {
   ) => {
     setMarkdownContent(event.target.value);
   };
-  const handleExpandClick = () => {
-    setIsExpanded((prevExpanded) => !prevExpanded);
+  const handleMaximizeClick = () => {
+    setIsExpanded(true);
+  };
+
+  const handleMinimizeClick = () => {
+    setIsExpanded(false);
   };
 
   return (
@@ -27,28 +31,30 @@ const MarkdownEditor = () => {
         <FontAwesomeIcon icon={faPen} id="pen"/> <h2 className="editorTitle">Markdown Editor</h2>
         </div>
         <div className="expandButtonsWrapper">
-        <FontAwesomeIcon icon={faWindowMaximize} id="max" className={`maximizeButton ${isExpanded ? "" : "expanded"}`} onClick={handleExpandClick}/>
-        <FontAwesomeIcon icon={faWindowMinimize} id="min" className={`minimizeButton ${isExpanded ? "expanded" : ""}`} onClick={handleExpandClick}/>
+        
+        <FontAwesomeIcon icon={faWindowMaximize} id="max" className={`maximizeButton ${isExpanded ? "" : "expanded"}`} onClick={handleMaximizeClick}/>
+        <FontAwesomeIcon icon={faWindowMinimize} id="min" className={`minimizeButton ${isExpanded ? "expanded" : ""}`} onClick={handleMinimizeClick}/>
 
 
         </div>
       
         </div>
+        
         <textarea
           className="markdownEditor"
           value={markdownContent}
           onChange={handleMarkdownChange}
           placeholder="Add the contents of your markdown here"
         />
+        
       </div>
 
       <div className={`markdownPreviewContainer ${isExpanded ? "expanded" : ""}`}>
         <div className="topBarPreview">
           <h2 className="previewTitle">Markdown Preview</h2>
           <div className="expandButtonsWrapper">
-        <FontAwesomeIcon icon={faWindowMaximize} id="max" className={`maximizeButton ${isExpanded ? "" : "expanded"}`} onClick={handleExpandClick}/>
-        <FontAwesomeIcon icon={faWindowMinimize} id="min" className={`minimizeButton ${isExpanded ? "expanded" : ""}`} onClick={handleExpandClick}/>
-
+          <FontAwesomeIcon icon={faWindowMaximize} id="max" className={`maximizeButton ${isExpanded ? "" : "expanded"}`} onClick={handleMaximizeClick}/>
+        <FontAwesomeIcon icon={faWindowMinimize} id="min" className={`minimizeButton ${isExpanded ? "expanded" : ""}`} onClick={handleMinimizeClick}/>
 
         </div>
 
