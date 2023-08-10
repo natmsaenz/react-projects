@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faWindowMaximize, faWindowMinimize,faEye } from "@fortawesome/free-solid-svg-icons";
+import {
+  faWindowMaximize,
+  faWindowMinimize,
+  faEye,
+} from "@fortawesome/free-solid-svg-icons";
 import "./MarkdownPreview.css";
 
 interface MarkdownPreviewProps {
@@ -21,23 +25,30 @@ const MarkdownPreview: React.FC<MarkdownPreviewProps> = ({ content }) => {
   };
   return (
     <div className={`markdownPreviewContainer ${isExpanded ? "expanded" : ""}`}>
-    <div className="topBarPreview">
-      <div className="leftSideContentPreview">
-      <FontAwesomeIcon icon={faEye} id="eye" />
-      <h2 className="previewTitle">Markdown Preview</h2>
-      
+      <div className="topBarPreview">
+        <div className="leftSideContentPreview">
+          <FontAwesomeIcon icon={faEye} id="eye" />
+          <h2 className="previewTitle">Markdown Preview</h2>
+        </div>
+        <div className="expandButtonsWrapper">
+          <FontAwesomeIcon
+            icon={faWindowMaximize}
+            id="max"
+            className={`maximizePreviewButton ${isExpanded ? "" : "expanded"}`}
+            onClick={handleMaximizeClick}
+          />
+          <FontAwesomeIcon
+            icon={faWindowMinimize}
+            id="min"
+            className={`minimizePreviewButton ${isExpanded ? "expanded" : ""}`}
+            onClick={handleMinimizeClick}
+          />
+        </div>
       </div>
-      <div className="expandButtonsWrapper">
-      <FontAwesomeIcon icon={faWindowMaximize} id="max" className={`maximizePreviewButton ${isExpanded ? "" : "expanded"}`} onClick={handleMaximizeClick}/>
-    <FontAwesomeIcon icon={faWindowMinimize} id="min" className={`minimizePreviewButton ${isExpanded ? "expanded" : ""}`} onClick={handleMinimizeClick}/>
-
+      
+        <ReactMarkdown className="previewContent">{content}</ReactMarkdown>
+      
     </div>
-
-    </div>
-    <ReactMarkdown>{content}</ReactMarkdown>
-  </div>
-     
-    
   );
 };
 
