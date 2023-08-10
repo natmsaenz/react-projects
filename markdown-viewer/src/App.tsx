@@ -11,15 +11,15 @@ function App() {
 
   return (
     <div className='container'>
+        <div className='markdownWrapper'>
+
+<MarkdownEditor />
+</div>
       <div className='sidebarWrapper'>
       <Sidebar />
       </div>
      
-      <div className='markdownWrapper'>
-
-        <MarkdownEditor />
-        <MarkdownPreview content={markdownContent} />
-      </div>
+    
      
     </div>
   )

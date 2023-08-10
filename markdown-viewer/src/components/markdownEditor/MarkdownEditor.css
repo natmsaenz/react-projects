@@ -26,11 +26,13 @@
     position: fixed;
     top: 0;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .markdownEditorContainer.expanded{
     width: 700px;
    height: 600px;
+   margin-bottom: 0;
 }
 
 .topBar{
@@ -90,12 +92,24 @@ textarea.markdownEditor{
     padding: 10px;
     resize: none;
     border: none;
-    margin-top:20px;
+    margin:20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px var(--navy);
+    border: 2px solid var(--aqua);
     background-color: var(--light-aqua);
     font-size: 16px;
     font-family: var(--ff-secondary);
     line-height: 1.5;
     overflow-y: scroll;
 }
+
+textarea.markdownEditor.expanded{
+    height: 90%;
+}
+
+.textarea.focused{
+border-color:var(--purple) ;
+outline: none;
+}
+
+

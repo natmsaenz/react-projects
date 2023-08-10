@@ -1,0 +1,78 @@
+:root {
+  --teal: #6ec6af;
+  --light: rgb(245, 255, 252);
+  --green: #85db51;
+  --navy: #282f56;
+  --purple: #9d65b5;
+  --lavender: rgb(222, 184, 238);
+  --indigo: #3a00a9;
+  --aqua: #00dcfe;
+  --light-aqua: #e3ebec;
+  --black: #000000;
+
+  --ff-primary: "Inconsolata", sans-serif;
+  --ff-secondary: "Space Mono", sans-serif;
+}
+
+.markdownPreviewContainer {
+  width: 900px;
+  height: 500px;
+  border-radius: 30px;
+  border: solid 1px var(--black);
+  background-color: var(--light-aqua);
+  box-shadow: 0 2px 4px var(--navy);
+  top: 0;
+  margin-bottom: 100px;
+}
+
+.markdownPreviewContainer.expanded {
+  height: 900px;
+  margin-bottom: 0;
+}
+
+.topBarPreview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--indigo);
+  font-size: 15px;
+  background-color: var(--navy);
+  border-bottom: 1px solid var(--black);
+  height: 9px;
+  padding: 9px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.topBarPreview .leftSideContentPreview {
+  display: flex;
+  align-items: center;
+}
+
+.previewTitle {
+  padding: 5px;
+  font-family: var(--ff-primary);
+  font-weight: 200;
+  color: var(--teal);
+  font-size: 20px;
+}
+#eye {
+  color: var(--teal);
+  font-size: 12px;
+}
+.maximizePreviewButton{
+    padding: 5px;
+    color: var(--teal);
+}
+
+.minimizePreviewButton{
+    padding: 5px;
+    color: var(--teal);
+
+}
+
