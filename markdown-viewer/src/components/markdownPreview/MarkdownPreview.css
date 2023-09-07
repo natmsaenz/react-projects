@@ -21,13 +21,15 @@
   border: solid 1px var(--black);
   background-color: var(--light-aqua);
   box-shadow: 0 2px 4px var(--navy);
-  top: 0;
-  margin-bottom: 100px;
+  position: sticky;
+  top: 20px;
+  z-index: 1;
 }
 
 .markdownPreviewContainer.expanded {
   height: 900px;
   margin-bottom: 0;
+  margin-top: 300px;
 }
 
 .topBarPreview {

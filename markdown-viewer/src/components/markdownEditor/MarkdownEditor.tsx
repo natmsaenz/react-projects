@@ -51,7 +51,10 @@ const MarkdownEditor = () => {
         />
         
       </div>
+      <div className={`preview ${isExpanded ? "expanded" : ""}`}>
 <MarkdownPreview content={markdownContent} />
+
+      </div>
    
     </>
   );
