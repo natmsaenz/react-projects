@@ -31,12 +31,22 @@
 }
 
 .markdownEditorContainer.expanded{
-    width: 700px;
-   height: 400px;
-   margin-bottom: 500px;
+
+   height: 100vh;
+   margin-bottom: 20px;
 }
 
 
+@media screen and (max-width: 650px) {
+.markdownEditorContainer{
+    max-width: 630px;
+}
+}
+@media screen and (max-width: 850px) {
+    .markdownEditorContainer{
+        max-width: 830px;
+    }
+}
 .topBar{
     display: flex;
     flex-direction: row;
