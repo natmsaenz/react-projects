@@ -1,0 +1,126 @@
+:root {
+    --teal: #6ec6af;
+    --light: rgb(245, 255, 252);
+    --green: #85db51;
+    --navy: #282f56;
+    --purple: #9d65b5;
+    --lavender: rgb(222, 184, 238);
+    --indigo: #3a00a9;
+    --aqua: #00dcfe;
+    --light-aqua: #e3ebec;
+    --black:#000000;
+  
+    --ff-primary: "Inconsolata", sans-serif;
+    --ff-secondary: "Space Mono", sans-serif;
+  }
+
+.markdownEditorContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--navy);
+   width: 700px;
+   height: 250px;
+    border-radius: 30px;
+    border: solid 1px var(--black);
+    box-shadow:  0 2px 4px var(--navy);
+    position: sticky;
+    top: 0;
+    
+
+}
+
+.markdownEditorContainer.expanded{
+   height: 100vh;
+   margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 650px) {
+.markdownEditorContainer{
+    max-width: 630px;
+}
+}
+@media screen and (max-width: 850px) {
+    .markdownEditorContainer{
+        max-width: 830px;
+    }
+}
+.topBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--indigo);
+    font-size: 15px;
+    background-color:var(--teal);
+    border-bottom: 1px solid var(--black);
+    height: 9px;
+    padding: 9px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    border-top-right-radius:30px;
+    border-top-left-radius: 30px;
+    
+    
+}
+.topBar .leftSideContentEditor{
+    display: flex;
+    align-items: center;
+}
+.editorTitle{
+    padding: 5px;
+    font-family: var(--ff-primary);
+    font-weight: 200;
+    color: var(--navy);
+    font-size: 20px;
+}
+#pen{
+    color: var(--navy);
+    font-size: 10px;
+}
+.expandButtonsWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.maximizeButton{
+    padding: 5px;
+    color: var(--navy);
+}
+
+.minimizeButton{
+    padding: 5px;
+    color: var(--navy);
+}
+
+textarea.markdownEditor{
+    width: 90%;
+    height: 70%;
+    padding: 10px;
+    resize: none;
+    border: none;
+    margin:20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--navy);
+    border: 2px solid var(--aqua);
+    background-color: var(--light-aqua);
+    font-size: 16px;
+    font-family: var(--ff-secondary);
+    line-height: 1.5;
+    overflow-y: scroll;
+}
+
+textarea.markdownEditor.expanded{
+    height: 90%;
+}
+
+.textarea.focused{
+border-color:var(--purple) ;
+outline: none;
+}
+
+
+

@@ -1,0 +1,155 @@
+:root {
+  --teal: #6ec6af;
+  --light: rgb(245, 255, 252);
+  --green: #85db51;
+  --navy: #282f56;
+  --purple: #9d65b5;
+  --lavender: rgb(222, 184, 238);
+  --indigo: #3a00a9;
+  --aqua: #00dcfe;
+  --light-aqua: #e3ebec;
+  --black:#000000;
+
+  --ff-primary: "Inconsolata", sans-serif;
+  --ff-secondary: "Space Mono", sans-serif;
+}
+body{
+    background-color: var(--teal);
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 16px;
+  transition: transform .3s ease;
+  transform: translateX(0);
+  box-shadow: 0 2px 4px rgb(0, 5, 34);
+  border-radius: 20px;
+  background-color: rgba(187, 67, 243, 0.192);
+  margin-left:5px ;
+  border:1px solid var(--black);
+  
+}
+
+.sidebar.closed{
+transform: translateX(-100%);
+}
+
+.sidebarHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--indigo);
+  font-size: 15px;
+  background-color: rgba(212, 255, 242, 0.623);
+  border-bottom: 1px solid var(--black);
+  height: 9px;
+  padding: 9px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  border-top-right-radius:20px;
+  border-top-left-radius: 20px;
+}
+.sidebarHeader h2{
+    padding: 0 0 0 5px;
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: 15px;
+   
+}
+
+.sidebarHeader .leftSideContent{
+  display: flex;
+  align-items: center;
+}
+
+.sidebarTitle {
+  padding: 10px 10px 10px 2px;
+}
+
+.toggleButton {
+  padding: 10px;
+  cursor: pointer;
+ 
+}
+
+.toggleButton.rotateIcon svg {
+    animation: rotateIcon 0.5s; 
+  }
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 15px;
+  padding: 0;
+}
+ .cheatSheet{
+  background-color: var(--green);
+  padding: .05em;
+  margin: 2px;
+  border-radius: 10px;
+  border: 1px solid var(--black);
+  
+}
+
+.folder{
+  background-color: var(--light);
+  padding: .03em;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--black)
+
+}
+.cheatSheet:hover{
+  
+  box-shadow:0 2px 4px var(--navy);
+}
+
+.folder:hover{
+  box-shadow:0 2px 4px var(--navy);
+
+}
+
+.sidebarLinks a {
+  text-decoration: none;
+  color: var(--indigo);
+
+  font-family: var(--ff-secondary);
+}
+.sidebarLinks a:hover{
+  color: var(--indigo);
+}
+
+#xmark{
+    padding-left: 0px;
+    margin-right: 0;
+    font-size: 12px;
+}
+#pen{
+    color: var(--indigo);
+    font-size: 12px;
+    padding-right: 1px;
+}
+#cheatsheet {
+  padding-right: 5px;
+}
+#folder {
+  padding-right: 5px;
+}
+
+
+
+@keyframes rotateIcon {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
